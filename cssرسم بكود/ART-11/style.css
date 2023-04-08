@@ -1,0 +1,20 @@
+.carved-arow {
+	width: 30px;
+	height: 20px;
+	border-radius: 50%;
+	border-top: 4px solid red;
+	transform: rotate(30deg);
+	position: relative;
+}
+.carved-arow::after {
+	content: "";
+	width: 0;
+	height: 0;
+	border: solid transparent;
+	border-width: 10px;
+	border-left-color: red; 
+	position: absolute;
+	right: -80%;
+	top: -2px;
+	transform: rotate(20deg) translateX(-50%);
+}

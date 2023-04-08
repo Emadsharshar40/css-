@@ -1,0 +1,36 @@
+.star-5 {
+	width: 0;
+	height: 0;
+	margin: 200px auto;
+	position: relative;
+	border-top: 140px solid red;
+	border-right: 240px solid transparent;
+	border-bottom: 140px solid transparent;
+	border-left: 240px solid transparent;
+}
+.star-5::before {
+	content: "";
+	width: 0;
+	height: 0;
+	position: absolute;
+	left: -239px;
+	top: -140px;
+	border-top: 140px solid red;
+	border-right: 240px solid transparent;
+	border-bottom: 140px solid transparent;
+	border-left: 240px solid transparent;
+	transform: rotate(58deg);
+}
+.star-5::after {
+	content: "";
+	width: 0;
+	height: 0;
+	position: absolute;
+	left: -240px;
+	top: -140px;
+	border-top: 140px solid red;
+	border-right: 240px solid transparent;
+	border-bottom: 140px solid transparent;
+	border-left: 240px solid transparent;
+	transform: rotate(-61deg);
+}

@@ -1,0 +1,226 @@
+:root {
+    --main-color: #e98b00;
+}
+/*standard reset*/
+*,
+*::before,
+*::after,
+body {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: Comic Sans MS;
+    text-transform: capitalize;
+    perspective-origin: 50% calc(50% - 280px);
+    perspective: 600px;
+}
+body {
+    min-height: 100vh;
+    background: black;
+}
+/*standard reset*/
+
+/*special floor*/
+.floor {
+    width: 65%; 
+    height: 800px;
+    background-image:
+    radial-gradient(#0000,#000 75%),
+    repeating-conic-gradient(
+    from 45deg,
+    #111 0deg 90deg,
+    #222 90deg 180deg);
+    background-size: 100%, 1em 1em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) rotateX(90deg) skew(10deg) scale(1.2);
+}
+/*special floor*/
+
+/*start style article*/
+article {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 2;
+    display: flex;
+    gap: 40px;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+article div:first-of-type {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    text-align: center;
+}
+span {
+    color: var(--main-color);
+}
+article div:first-of-type h1 {
+    color: white;
+    font-size: 60px;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+article div:first-of-type p {
+    color: #666;
+}
+article div:nth-of-type(2) {
+    width: 3px;
+    height: 270px;
+    background: #ffd100;
+    border-radius: 4px;
+    filter: blur(2px);
+    box-shadow: 0 0 10px #000000,
+    0 0 15px #000000,
+    0 0 20px #ff6a00,
+    0 0 25px var(--main-color);
+}
+:focus {
+    outline: none;
+}
+input:not(input[type="submit"]) {
+    border: none;
+    background-color: #222;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    padding: 15px 10px;
+    color: white;
+}
+input:not(input[type="submit"])::placeholder {
+    transition: .3s;
+    color: #999;
+}
+input:not(input[type="submit"]):focus::placeholder {
+    opacity: .3;
+}
+input[type="submit"] {
+    display: block;
+    width: fit-content;
+    margin: 5px auto;
+    background-color: #222;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 18px;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    height: fit-content;
+    background: var(--main-color);
+    padding: 15px;
+    border-radius: 4px;
+}
+form h2 {
+    text-align: center;
+    margin-bottom: 10px;
+    color: white;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 29px;
+}
+/*End style article*/
+
+/*start style header & footer*/
+footer,
+header {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    text-align: center;
+    z-index: 4;
+    text-transform: uppercase;
+}
+header {
+    top: 15px;
+    color: #fff;
+    font-size: 30px;
+    font-style: italic;
+    font-weight: bold;
+}
+header p {
+    text-shadow: 1px 1px 10px var(--main-color);
+    position: relative;
+    width: fit-content;
+    margin: auto;
+}
+header p::before {
+    content: "";
+    position: absolute;
+    left: -10%;
+    top: 0;
+    width: 120%;
+    height: 100%;
+    background: var(--main-color);
+    z-index: -1;
+    filter: blur(100px);
+}
+footer {
+    bottom: 15px;
+    color: #888;
+}
+/*End style header & footer*/
+
+/*start media query for responsive*/
+@media (max-width:991px) {
+    header {
+        display: none;
+    }
+    article {
+        top: 0;
+        transform: translate(-50%,0);
+        gap: 0;
+        flex-direction: column;
+    }
+    article div:first-of-type {
+        margin-top: 15px;
+        margin-bottom: 40px;
+    }
+    article div:first-of-type h1 {
+        font-size: 40px;
+    }
+    article div:nth-of-type(2) {
+        display: none;
+    }
+    .floor {
+        height: 400px;
+        width: 60%;
+    }
+}
+@media (max-width: 767px) {
+    form {
+        width: 95%;
+    }
+}
+/*End media query for responsive*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

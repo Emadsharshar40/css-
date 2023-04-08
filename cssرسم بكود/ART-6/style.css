@@ -1,0 +1,35 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+#infinity {
+    width: 220px;
+    height: 100px;
+    position: relative;
+    /*box-sizing: content-box;*/
+}
+#infinity::after,
+#infinity::before {
+    content: "";
+    /*box-sizing: content-box;*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 60px;
+    border: 20px solid #f00;
+    transform: rotate(-45deg);
+    border-radius: 50% 50% 0 50%;
+}
+#infinity::after {
+    right: 0;
+    left: auto;
+     border-radius: 0 50% 50% 50%;
+}
